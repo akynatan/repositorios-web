@@ -7,10 +7,10 @@ function App() {
   const [repositories, setRepositories] = useState([]);
 
   useEffect(() => {
-      api.get('repositories').then(response => {
+    api.get('repositories').then(response => {
         setRepositories(response.data);
       });
-  });
+  }, []);
 
   async function handleAddRepository() {
     api.post('repositories', {
@@ -25,15 +25,10 @@ function App() {
   }
 
   async function handleRemoveRepository(id) {
-    api.delete(`repositories/${id}`, {
-      title: `Novo Repository ${Date.now()}`,
-      url: "Novo.novo",
-      techs: [
-        "novojs"
-      ]
-    }).then(response => {
+    api.delete(`repositories/${id}`)
+    .then(response => {
       const repositoriesUpdated = repositories.filter(repository => repository.id !== id);
-      setRepositories([repositoriesUpdated]);
+      setRepositories(repositoriesUpdated);
     });
   }
 
