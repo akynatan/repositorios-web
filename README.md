@@ -9,7 +9,7 @@
 
 - **`Listar os repositórios da sua API`**: Listagem com o campo **title** de todos os repositórios que estão cadastrados na sua API.
 
-- **`Adicionar um repositório a sua API`**: Cadastro de novo item na sua API através de um botão com o texto **Adicionar** e, após a criação, deve ser capaz de exibir o nome dele após o cadastro.
+- **`Adicionar um repositório a sua API`**: Cadastro de novo item na sua API através de um botão com o texto **Adicionar**.
 
 - **`Remover um repositório da sua API`**: Para cada item da lista, é possivel remover esse item da lista do frontend e da API.
 
